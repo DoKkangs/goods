@@ -15,6 +15,6 @@
 |:---:|
 ![1](https://github.com/DoKkangs/goods/assets/88784852/4f3a507d-e1a7-47b6-977d-4ae049517000)
 ![2](https://github.com/DoKkangs/goods/assets/88784852/1b2be640-e3cd-42de-88da-658ba66329c4)
-- 김도현: [Entity Relationship Diagram]![3](https://github.com/DoKkangs/goods/assets/88784852/8e5e079d-bc83-4777-84ea-e7475071a02e) / [Use Case Diagram]
+- 김도현: [Entity Relationship Diagram]![3](https://github.com/DoKkangs/goods/assets/88784852/8e5e079d-bc83-4777-84ea-e7475071a02e)
 ##
 #### ReadMe 양식 참고 [지수님 GitHub](https://github.com/jisulee-shsf/spring-hanghae99-assignment-level2)
