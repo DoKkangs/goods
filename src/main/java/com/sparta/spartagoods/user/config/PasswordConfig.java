@@ -1,4 +1,4 @@
-package com.sparta.backoffice.user.config;
+package com.sparta.spartagoods.user.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

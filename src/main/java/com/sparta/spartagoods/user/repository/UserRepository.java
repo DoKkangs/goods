@@ -1,7 +1,7 @@
-package com.sparta.backoffice.user.repository;
+package com.sparta.spartagoods.user.repository;
 
 
-import com.sparta.backoffice.user.entity.User;
+import com.sparta.spartagoods.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

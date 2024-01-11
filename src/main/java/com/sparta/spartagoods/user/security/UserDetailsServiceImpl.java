@@ -1,8 +1,7 @@
-package com.sparta.backoffice.user.security;
+package com.sparta.spartagoods.user.security;
 
-
-import com.sparta.backoffice.user.entity.User;
-import com.sparta.backoffice.user.repository.UserRepository;
+import com.sparta.spartagoods.user.entity.User;
+import com.sparta.spartagoods.user.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

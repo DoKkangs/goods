@@ -1,2 +1,10 @@
-package com.sparta.spartagoods.item.repository;public interface ItemRepository {
+package com.sparta.spartagoods.item.repository;
+
+import com.sparta.spartagoods.item.entity.Item;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ItemRepository extends JpaRepository<Item, Long> {
+    Page<Item> findAllBy(Pageable pageable);
 }

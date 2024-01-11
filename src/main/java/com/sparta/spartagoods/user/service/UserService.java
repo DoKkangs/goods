@@ -1,11 +1,12 @@
-package com.sparta.backoffice.user.service;
+package com.sparta.spartagoods.user.service;
 
-import com.sparta.backoffice.user.dto.SignupRequestDto;
-import com.sparta.backoffice.user.dto.UserResponseDto;
-import com.sparta.backoffice.user.entity.User;
-import com.sparta.backoffice.user.entity.UserRoleEnum;
-import com.sparta.backoffice.user.jwt.JwtUtil;
-import com.sparta.backoffice.user.repository.UserRepository;
+
+import com.sparta.spartagoods.user.dto.SignupRequestDto;
+import com.sparta.spartagoods.user.dto.UserResponseDto;
+import com.sparta.spartagoods.user.entity.User;
+import com.sparta.spartagoods.user.entity.UserRoleEnum;
+import com.sparta.spartagoods.user.jwt.JwtUtil;
+import com.sparta.spartagoods.user.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,7 +38,8 @@ public class UserService {
         }
 
         String password = passwordEncoder.encode(enterPassword);
-
+        String gender = requestDto.getGender();
+        String phoneNumber = requestDto.getPhoneNumber();
 
         // email 중복확인
         Optional<User> checkEmail = userRepository.findByEmail(email);
@@ -52,8 +54,15 @@ public class UserService {
         }
 
         // 사용자 등록
-        User user = new User(email, password, role);
+        User user = new User(email, password, gender, phoneNumber, role);
         userRepository.save(user);
         return new UserResponseDto(user);
+    }
+
+
+    public User findUser(Long userId) {
+        return userRepository.findById(userId).orElseThrow(
+                () -> new IllegalArgumentException("해당 회원은 존재하지 않습니다.")
+        );
     }
 }

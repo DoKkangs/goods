@@ -1,19 +1,17 @@
-package com.sparta.backoffice.user.entity;
+package com.sparta.spartagoods.user.entity;
 
-import com.sparta.backoffice.comment.entity.Comment;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,16 +23,21 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @OneToMany(mappedBy = "user")
-    private List<Comment> comments = new ArrayList<>();
+    @Column(name = "gender")
+    private String gender;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
 
     @Column(name = "role", nullable = false)
     @Enumerated(value = EnumType.STRING)
     private UserRoleEnum role;
 
-    public User(String email, String password,UserRoleEnum role) {
+    public User(String email, String password, String gender, String phoneNumber, UserRoleEnum role) {
         this.email = email;
         this.password = password;
+        this.gender = gender;
+        this.phoneNumber = phoneNumber;
         this.role = role;
     }
 }

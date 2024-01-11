@@ -1,6 +1,6 @@
-package com.sparta.backoffice.user.jwt;
+package com.sparta.spartagoods.user.jwt;
 
-import com.sparta.backoffice.user.entity.UserRoleEnum;
+import com.sparta.spartagoods.user.entity.UserRoleEnum;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;

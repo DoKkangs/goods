@@ -1,4 +1,4 @@
-package com.sparta.backoffice.user.dto;
+package com.sparta.spartagoods.user.dto;
 
 import lombok.Getter;
 import lombok.Setter;

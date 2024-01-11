@@ -1,9 +1,9 @@
-package com.sparta.backoffice.user.jwt;
+package com.sparta.spartagoods.user.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sparta.backoffice.user.dto.LoginRequestDto;
-import com.sparta.backoffice.user.entity.UserRoleEnum;
-import com.sparta.backoffice.user.security.UserDetailsImpl;
+import com.sparta.spartagoods.user.dto.LoginRequestDto;
+import com.sparta.spartagoods.user.entity.UserRoleEnum;
+import com.sparta.spartagoods.user.security.UserDetailsImpl;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -23,7 +23,7 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 
     public JwtAuthenticationFilter(JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;
-        setFilterProcessesUrl("/admin/user/login");
+        setFilterProcessesUrl("/api/user/login");
     }
 
     @Override
